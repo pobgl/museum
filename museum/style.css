@@ -1,7 +1,55 @@
 * {
     margin: 0 auto;
+    width: 100%;
 }
 
 section {
-    border: 1px solid red; 
+     display: flex;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 1440px;
+    border: 1px solid blue;
+    background-color: green;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    background-color: green;
+    height: 150px;
+}
+
+.nav_logo {
+    background-image: url("assets/svg/Vector.svg");
+    background-repeat: no-repeat;
+    text-transform: uppercase;
+    width: 230px;
+    display: flex;
+    justify-content: right;
+
+}
+
+.navigation_bar {
+    display: flex;
+    width: 100%;
+    justify-content: right;
+}
+
+.navigation_list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 450px;
+    justify-content: right;
+}
+
+.visiting, section {
+    height: 250px;
 }
