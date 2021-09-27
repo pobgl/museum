@@ -23,7 +23,7 @@ html {
 
 .section {
     margin: 0;
-    background-color: yellow
+    /* background-color: yellow */
     display: flex;
     padding-top: 75px;
     padding-bottom: 75px;
@@ -41,7 +41,7 @@ html {
     width: 1440px;
     height: 100%;
     /* border: 1px solid blue; */
-    background-color: green;
+    /* background-color: green; */
 }
 
 .nav_logo {
@@ -217,26 +217,212 @@ html {
     height: 1266px;
 }
 
+.visiting_content-wrapper {
+    
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.visiting-title {
+    width: 100%;
+    display: flex;
+    margin-left: 0;
+    
+    height: 118px;
+}
+
+.light-section-title {
+    color: #9D8665;
+}
+
+.section-border {
+    border-bottom: 3px solid #710707;
+}
+
 .explore {
     height: 865px;
+}
+
+.explore_content-wrapper {
+    
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    background-image: url("assets/img/explore-slider/after.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.explore-title {
+    margin-left: 0;   
+    height: 118px;
+    width: 660px;
+}
+
+.explore-content {
+    margin-left: 0;
+    margin-top: 54px;
+    width: 660px;
+}
+
+.explore-content p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 38px;
+
+    margin-top: 23px;
+
+/* or 175% */
+
+    color: #FFFFFF;
 }
 
 .video {
     height: 1396px;
 }
 
+.video_content-wrapper {
+    height: 90px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.video-title {
+    margin-left: 0;
+}
+
+.video-content {
+    width: 660px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 38px;
+
+    /* or 175% */
+    
+
+    color: #000000;
+}
+
+.gallery_content-wrapper {
+    width: 100%;
+}
+
 .gallery {
     height: 2200px;
+    width: 100%;
+}
+
+.gallery-title {
+    
+    margin-left: 0;
 }
 
 .tickets {
-    height: 2255px;
+    height: 1293px;
+}
+
+.tickets_content-wrapper {
+    
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.tickets-title {
+    width: 100%;
+    display: flex;
+    margin-left: 0;
+    
+    height: 118px;
 }
 
 .contacts {
-    height: 265px;
+    height: 962px;
+}
+
+.contacts_content-wrapper {
+    
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contacts-title {
+    width: 100%;
+    display: flex;
+    margin-left: 0;
+    
+    height: 118px;
 }
 
 .footer {
-    height: 125px;
+    height: 392px;
+    
 }
+
+.footer-container {
+    padding-top: 85px;
+}
+
+.nav_logo {
+    background-image: url("assets/svg/Vector.svg");
+    background-repeat: no-repeat;
+    
+    font-family: Forum;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 31px;
+    
+    /* identical to box height */
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    
+    color: #FFFFFF;
+    width: 230px;
+    display: flex;
+    justify-content: right;
+
+}
+
+.footer-navigation_bar {
+    margin-top: 25px;
+    display: flex;
+    width: 100%;
+    justify-content: right;
+}
+
+/* .navigation_list {
+    margin-right: 0;
+    display: flex;
+    
+    list-style: none;
+    width: 840px;
+    justify-content: space-between;
+
+    
+}
+
+.navigation_list_item a {
+    display: flex;
+    width: auto;
+    text-decoration: none;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 22px;
+    line-height: 26px;
+
+    letter-spacing: 2px;
+
+    color: #FFFFFF;
+} */
