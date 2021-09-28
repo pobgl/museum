@@ -102,6 +102,7 @@ html {
     height: 810px;
     padding-top: 0px;
     padding-bottom: 60px;
+    
 }
 
 .welcome_content-wrapper {
@@ -110,7 +111,7 @@ html {
     background-image: url("assets/img/welcome-slider/1.jpg ");
     background-repeat: no-repeat;
     background-position: right;
-  
+    
     width: 100%;
 }
 
@@ -118,12 +119,17 @@ html {
     display: flex;
     flex-direction: column;
     width: 100%;
+    background: linear-gradient(90deg, #000000 0%, rgb(0, 0, 0), rgba(0, 0, 0, 0));
 }
 
 .welcome-title {
     margin-top: 150px;       
     width: 100%;    
     
+}
+
+.welcome-title span {
+    display: block;
 }
 
 .section-title {
@@ -161,6 +167,8 @@ html {
 }
 
 .discover-button {
+    cursor: pointer;
+    border: none;
     display: flex;
     justify-content: center;
     height: 75px;
@@ -224,12 +232,81 @@ html {
     width: 100%;
 }
 
+
+
 .visiting-title {
     width: 100%;
     display: flex;
     margin-left: 0;
     
     height: 118px;
+}
+
+.visiting-content {
+    padding-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 60px;
+    column-gap: 45px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.visiting-card {
+    
+    text-decoration: none;
+    display: block;
+}
+
+
+
+.visiting-card h3 {
+    margin-top: 20px;
+    font-family: Forum;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 35px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+    color: black;
+}
+
+.underline-visiting-card {
+    position: relative;
+  }
+  
+.underline-visiting-card:after {
+    content: "";
+    position: absolute;
+    bottom: -14px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: #710707;
+}
+
+.visiting-card p:nth-child(3) {
+    margin-top: 24px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 22px;
+    line-height: 26px;
+
+    color: #000000;
+}
+
+.visiting-card p:nth-child(4) {
+    margin-top: 10px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 26px;
+
+    color: #000000;
 }
 
 .light-section-title {
