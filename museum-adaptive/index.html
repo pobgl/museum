@@ -205,15 +205,60 @@
                         Buy tickets
                     </h2>
                     <div class="tickets-content">
+                        <div class="tickets-image">
+                            <img src="/assets/img/buy.png" alt="buy">
+                        </div>
+                        <div class="tickets-radio-wrapper">
+                            <div class="tickets-radio">
+                                <h3>Ticket Type</h3>
+                                <div class="form_radio">
+                                    <input id="radio-1" type="radio" name="radio" value="1" checked>                                
+                                    <label for="radio-1">Permanent exhibition</label>                                
+                                </div>                       
+                                <div class="form_radio">                                
+                                    <input id="radio-2" type="radio" name="radio" value="2">                                
+                                    <label for="radio-2">Temporary exhibition</label>                                
+                                </div>                           
+                                <div class="form_radio">                                
+                                    <input id="radio-3" type="radio" name="radio" value="3">                                
+                                    <label for="radio-3">Combined Admission</label>                                
+                                </div>
+                                
+                            </div>
+                        </div>                        
+                        <div class="amount-container">
+                            <div class="amount-title">
+                                <h3>Amount</h3>
+                            </div>
+                            <div class="amount-basic">
+                                Basic 18+
+                                <div class="counter">
+                                    <p>-</p>
+                                    <p>1</p>
+                                    <p>+</p> 
+                                </div>
+                            </div>
+                            <div class="amount-senior">
+                                Senior 65+
+                                <div class="counter">
+                                    <p>-</p>
+                                    <p>1</p>
+                                    <p>+</p> 
+                                </div>
+                            </div>
+                            <div class="amount-total">
+                                <h3>Total €220</h3> 
+                            </div>
 
-                    </div>
-                    
+                            <button class="buy">
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>                    
                 </div> 
-            </div>
-                       
+            </div>                       
         </section>
-        <div class="parallax">
-                        
+        <div class="parallax">                        
         </div> 
         <section class="section contacts" id="contacts">
             <div class="container">
@@ -250,31 +295,37 @@
     <footer class="footer dark-section">
         <div class="container">
             <div class="container footer-container">            
-                <h2 class="nav_logo">
+                <h2 class="footer-nav_logo">
                     Louvre
                 </h2>
-                <nav class="navigation_bar">
-                    <ul class="navigation_list">
-                        <li class="navigation_list_item">
+                <nav class="footer-navigation-bar">
+                    <ul class="navigation_list-column">
+                        <li class="navigation_list-column_item">
                             <a href="#visiting">Visiting</a>  
                         </li>
-                        <li class="navigation_list_item">
+                        <li class="navigation_list-column_item">
                             <a href="#explore">Explore</a>  
                         </li>
-                        <li class="navigation_list_item">
+                        <li class="navigation_list-column_item">
                             <a href="#video">Video</a> 
                         </li>
-                        <li class="navigation_list_item">
+                    </ul>
+                    <ul class="navigation_list-column">
+                        <li class="navigation_list-column_item">
                             <a href="#gallery">Gallery</a> 
                         </li>
-                        <li class="navigation_list_item">
+                        <li class="navigation_list-column_item">
                             <a href="#tickets">Tickets</a> 
                         </li>
-                        <li class="navigation_list_item">
+                        <li class="navigation_list-column_item">
                             <a href="#contacts">Contacts</a>     
                         </li>
                     </ul>
-                </nav>            
+                    
+                </nav> 
+                <div class="social">
+                        
+                </div>           
             </div>
         </div>
     </footer>    
