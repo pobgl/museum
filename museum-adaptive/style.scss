@@ -1,0 +1,789 @@
+$color-background-dark: #030303;
+$color-background-light: #FFFFFF;
+
+$color-dark-red: #710707;
+
+$color-font-gold: #9d8665; 
+$color-font-grey: #7E6C51;
+
+$welcome-section-gradient-background: url("assets/img/welcome-slider/1.jpg"), linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%);                                   
+$louvre-logo-background: url("assets/svg/Vector.svg");
+
+@mixin h1 {
+    font: {
+        family: Forum;
+        weight: normal;
+        style: normal;
+        size: 28px;
+    }
+    line-height: 31px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: $color-background-light;
+}
+
+@mixin h2 {
+    font: {
+        family: Forum;
+        style: normal;
+        weight: 300;
+        size: 80px;
+    }
+    line-height: 90px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: $color-background-light;  
+}
+
+@mixin h3 {
+    font: {    
+        family: Forum;
+        weight: normal;
+        style: normal;
+        size: 32px;
+    }
+    line-height: 35px;
+    letter-spacing: 5px;
+    text-transform: uppercase;  
+}
+
+@mixin visiting-card-paragraph {
+    font: {
+        family: Roboto;
+        weight: 200;
+        style: normal;        
+        size: 22px;
+
+    }
+    line-height: 26px;
+    color: $color-background-dark;
+}
+
+@mixin paragraph-normal {
+    font: {
+        family: Roboto;
+        style: normal;
+        weight: 300;
+        size: 22px;
+    }
+    line-height: 38px;
+    color: $color-background-light;
+}
+
+@mixin paragraph-gold {
+    @include paragraph-normal;
+    
+    color: $color-font-gold;
+}
+
+@mixin navigation-menu {
+    font: {
+        family: Roboto;
+        style: normal;
+        weight: 200;
+        size: 22px;    
+    }
+    
+    line-height: 26px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: $color-background-light;            
+}
+
+@mixin paragraph-text {
+    font: {
+        family: Roboto;
+        style: normal;
+        weight: 300;
+        size: 28px; 
+    }
+    line-height: 33px;
+    letter-spacing: 2px;  
+    color: $color-background-light;
+}
+
+@mixin slider_button {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    width: 360px;
+    border: none; 
+    border-radius: 10px;
+    background: $color-dark-red;
+    outline: none; 
+    transition-duration: 0.5s;
+    cursor: pointer;                        
+    
+    &:hover {
+        background-color: $color-font-gold;
+        box-shadow: inset 0 0 0 2px $color-background-dark;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    font-size: 10px;
+}
+    
+* {
+    margin: 0 auto;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.header {    
+    height: 150px;
+
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.section {
+    margin: 0;    
+    display: flex;
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+.dark-section {
+    background-color: $color-background-dark;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 1440px;
+    height: 100%;    
+}
+
+// **NAVIGATION**
+
+.nav_logo {
+    background-image: $louvre-logo-background;
+    background-repeat: no-repeat;
+    
+    @include h1();
+    
+    width: 230px;
+    display: flex;
+    justify-content: right;
+}
+
+.navigation_bar {
+    display: flex;
+    width: 100%;
+    justify-content: right;
+
+    .navigation_list {
+        display: flex;
+        margin-right: 0;        
+        list-style: none;
+        width: 840px;
+        justify-content: space-between;
+        
+        &_item a {            
+            width: auto;
+            @include navigation-menu();
+        }       
+    }
+}
+
+// ******************************WELCOME******************************
+
+.welcome {
+    height: 810px;
+    padding-top: 0px;
+    padding-bottom: 60px;
+    
+    .welcome_content-wrapper {
+        display: flex;
+        justify-content: space-between;
+        background-image: $welcome-section-gradient-background;
+        background-repeat: no-repeat;
+        background-position: right;
+        width: 100%;
+
+        .welcome-content {
+            flex-direction: column;
+            width: 100%;
+            background: linear-gradient(90deg, #030303 25%, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+            
+            .welcome-title {
+                margin-top: 150px;                
+            }
+            
+            .welcome-title span {
+                display: block;
+            }
+            
+            .section-title {
+                @include h2();                
+            }
+            
+            .welcome-text {
+                width: 100%;
+                margin-top: 25px;            
+                @include paragraph-text();
+
+                
+            }
+            .button-container {    
+                display: flex;
+                width: 360px;
+                margin-top: 75px;
+                margin-left: 0;
+
+                .discover-button {
+                    @include slider_button();                        
+                    @include navigation-menu();                                         
+                }
+            }
+        }
+
+    }
+}
+
+.welcome-slider-wrapper {
+    display: flex;    
+    width: 100%;
+    
+}
+
+.welcome-slider {
+    display: flex;
+    height: 120px;
+    width: 600px;
+    background-color: $color-background-dark;
+    padding-top: 42px;
+    padding-left: 76px;    
+    margin-right: 0;
+    margin-top: 690px;
+    @include paragraph-normal();
+    text-transform: uppercase;
+    color: $color-background-light;
+}
+
+// ******************************VISITING******************************
+
+.visiting {
+    height: 1266px;
+}
+
+.visiting_content-wrapper {
+    
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+
+.visiting-title {
+    width: 100%;
+    display: flex;
+    margin-left: 0;
+    @include h2();
+    height: 118px;
+}
+
+.visiting-content {
+    padding-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 60px;
+    column-gap: 45px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.visiting-card {
+    
+    text-decoration: none;
+    display: block;
+
+    h3 {
+        @include h3();
+        margin-top: 20px;
+        color: $color-background-dark;
+    }
+
+    .underline-visiting-card {
+        position: relative;
+
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: -14px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background-color: $color-dark-red; 
+        }
+    }
+        
+    p:nth-child(3) {
+        margin-top: 24px;
+        @include visiting-card-paragraph();
+    }
+
+    p:nth-child(4) {
+        margin-top: 10px;
+        @include visiting-card-paragraph();
+        font-size: 18px;
+        color: #000000;
+    }
+}
+
+.light-section-title {
+    color: #9D8665;
+}
+
+.section-border {
+    border-bottom: 3px solid $color-dark-red;
+}
+
+// ******************************EXPLORE******************************
+
+.explore {
+    height: 865px;
+
+    .explore_content-wrapper {    
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    
+        background-image: url("assets/img/explore-slider/after.jpg");
+        background-repeat: no-repeat;
+        background-position: right;
+
+        .explore-title {
+            @include h2();
+            margin-left: 0;   
+            height: 118px;
+            width: 660px;
+        }
+        
+        .explore-content {
+            margin-left: 0;
+            margin-top: 54px;
+            width: 655px;
+
+            p {
+                @include paragraph-normal();            
+                margin-top: 23px;         
+
+                span {
+                    @include paragraph-gold();
+                }
+            } 
+        }        
+    }
+}
+
+// ******************************VIDEO******************************
+
+.video {
+    height: 1396px;
+
+    &_content-wrapper {
+        display: flex;
+        flex-flow: wrap;
+        row-gap: 75px;
+        column-gap: 50px;
+        height: 90px;
+        width: 100%;        
+        align-items: center;
+        justify-content: space-between;
+        
+        .video-title {            
+            @include h2();
+            margin-left: 0;
+            color: $color-font-grey;
+        }
+        
+        .video-content {
+            width: 690px;
+            @include paragraph-normal();
+            color: $color-background-dark;
+        }
+        
+        .main-video {
+            display: flex;
+            flex-flow: wrap;
+            row-gap: 38px;
+            column-gap: 35px;
+        }
+    }
+}
+
+// ******************************GALLERY******************************
+
+.gallery_content-wrapper {
+    width: 100%;
+}
+
+.gallery {
+    height: 2200px;
+    width: 100%;
+    overflow-y: hidden;    
+}
+
+.gallery-title {
+    @include h2();
+    margin-left: 0;
+}
+
+.picture-container {
+    width: 100%;
+    height: 3100px;    
+    padding-top: 75px;
+
+    .picture-inner-container {
+        height: 100%;
+        display: flex;        
+        flex-flow: wrap column;
+        row-gap: 24px;
+        column-gap: 36px;    
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, $color-background-dark 100%);
+        
+        img {            
+            width: 456px;
+
+            &:nth-child(1) {
+                margin-top: 50px;
+            }
+            
+            &:nth-child(11) {
+                margin-top: 50px;
+            }
+        } 
+    }
+}
+
+// ******************************TICKETS******************************
+
+
+
+.tickets {
+    height: 893px;
+    padding-bottom: 0;
+
+    .tickets_content-wrapper {
+    
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .tickets-title {
+            width: 100%;
+            display: flex;
+            margin-left: 0;
+            @include h2();
+            height: 118px;
+            color: $color-font-grey;
+        }
+        
+        .tickets-content {
+            padding-top: 75px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            .tickets-image {    
+            }
+            
+            .tickets-radio-wrapper {
+                width: 100%;
+                padding-left: 60px;  
+                
+                .tickets-radio {                    
+                    display: flex;
+                    flex-direction: column;
+                    margin-right: auto;
+                    margin-left: 0;
+                    max-width: fit-content;
+                    
+                    h3 {
+                        width: 100%;
+                        padding-bottom: 25px;
+                        @include paragraph-text();
+                        font-weight: 700;
+                        letter-spacing: 0px;
+                        color: $color-background-dark;
+                        text-align: left;                                                
+                    }
+
+                    .form_radio {    
+                        width: 100%;
+                        padding-top: 25px;
+                        font-family: Roboto;
+                        font-size: 22px;
+                        font-style: normal;
+                        font-weight: 300;
+                        line-height: 26px;
+                        letter-spacing: 0em;
+                        text-align: left;
+
+                        label {
+                            padding-left: 20px;
+                            line-height: 18px;
+                        }
+                        
+                        input {
+                            width: 17px;
+                            height: 17px;
+                            cursor: pointer;
+                        }
+                    }
+                
+                }
+            }
+
+            .amount-title h3{    
+                text-align: right;
+                color: #000000;
+                font-family: Roboto;
+                font-size: 28px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 33px;
+                letter-spacing: 0em;
+            }
+            
+            .amount-basic {
+                padding-top: 25px;
+                font-family: Roboto;
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 26px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+            
+            .amount-senior {
+                padding-top: 10px;
+                font-family: Roboto;
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 26px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+
+            .amount-total h3{
+                padding-top: 50px;
+                text-align: left;
+                color: #000000;
+                font-family: Roboto;
+                font-size: 28px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 33px;
+                letter-spacing: 1.649999976158142px;
+            }
+            
+            .buy {
+                cursor: pointer;
+
+                margin-top: 60px;
+                margin-left: -25px;
+                height: 50px;
+                width: 175px;
+                left: 1265px;
+                top: 586px;
+                border-radius: 0px;
+            
+                font-family: Roboto;
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 26px;
+                letter-spacing: 2px;
+                text-align: center;
+            
+                color: #FFFFFF;
+                background: #000000;            
+            }
+        }
+    }
+}
+
+.counter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 15px;
+    width: 150px;
+    height: 50px;
+    border: solid black 3px;
+
+    p {
+        font-family: Roboto;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 26px;
+        letter-spacing: 0em;
+    }
+}
+
+// ******************************CONTACTS******************************
+
+.parallax {
+    position: relative;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url(assets/img/parallax.jpg);
+    width: 100%;
+    height: 400px;
+    margin-bottom: 0;
+}
+
+.contacts {
+    height: 962px;
+}
+
+.contacts_content-wrapper {    
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contacts-title {
+    @include h2();
+    color: $color-font-grey;
+    width: 100%;
+    display: flex;
+    margin-left: 0;    
+    height: 118px;
+}
+
+.contacts-wrapper {
+    display: flex;    
+    justify-content: space-between;
+    width: 100%;
+}
+
+.contacts-content {
+    width: 278px;
+    height: 245px;
+    margin-top: 75px;
+    margin-left: 0;
+    display: block;    
+}
+
+.contacts-content h3 {
+    display: block;
+    width: 100%;
+    font-family: Roboto;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 33px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000000;
+}
+
+.contacts-text {
+    display: block;
+    width: 100%;
+    font-family: Roboto;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 26px;
+    letter-spacing: 0em;
+    margin-top: 50px;
+    color: #000;
+}
+
+.contacts-text p {
+    margin-top: 24px;
+}
+
+.contacts-image {
+    width: 960px;
+    margin-left: 200px;    
+    margin-top: 70px;
+}
+
+.contacts-content span {
+    display: block;    
+}
+
+// ******************************FOOTER******************************
+
+.footer {
+    height: 392px;    
+}
+
+.footer-container {
+    display: flex;
+    padding-top: 85px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.footer-nav_logo {
+    display: flex;
+    background-image: url("assets/svg/Vector.svg");
+    background-repeat: no-repeat;    
+    font-family: Forum;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 31px;   
+    letter-spacing: 5px;
+    text-transform: uppercase;    
+    color: #FFFFFF;
+    width: 330px;    
+    justify-content: right;
+}
+
+.footer-navigation-bar {
+    padding-left: 80px;    
+    display: flex;
+    width: 700px;
+    justify-content: right;
+}
+
+.navigation_list-column {    
+    display: flex;
+    flex-direction: column;
+    list-style: none;    
+}
+
+.navigation_list-column_item a {
+    display: flex;
+    text-decoration: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.social {
+    width: 100%;
+}
