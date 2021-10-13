@@ -308,7 +308,7 @@ html {
 
     .welcome-slider-image {
         position: absolute;
-        right: 230px;
+        right: 480px;
         z-index: 2;
         display: none;
     }
@@ -600,12 +600,88 @@ html {
         
         .main-video {
             display: flex;
-            flex-flow: wrap;
-            row-gap: 38px;
-            column-gap: 35px;
+            width: 1440px;
+            justify-content: space-between;
+            // flex-flow: wrap;
+            // row-gap: 38px;
+            // column-gap: 35px;
+        }
+        .video-prev-wrapper {
+            position: relative;
+            display: flex;
+            top: -50px;
+            
+            .video-prev {
+                display: none;
+                margin-left: 18px;
+                margin-right: 18px;
+            }
+
+            .video-prev.active {
+                display: block;
+            }
         }
     }
 }
+
+.video-slider-wrapper {
+    display: flex;    
+    width: 100%;
+    height: 100%; 
+    position: relative; 
+    top: -95px; 
+    
+    .video-slider-dots {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;        
+        width: 220px;    
+        
+        .video-dots-wrapper {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            
+    
+            .video-slider-dot {
+                border-radius: 50%;
+                margin: 8px;
+                width: 12px;
+                height: 12px;
+                background-color: $color-font-grey;
+                cursor: pointer;  
+            }
+    
+            .video-slider-dot.active {
+                background-color: $color-background-dark;
+            }
+    
+        }
+    
+        .video-left-arrow-wrapper {
+            display: flex;
+            margin: 10px;
+            
+                    
+    
+            .left-arrow {
+                cursor: pointer;
+                transform: rotate(180deg);
+            }
+        }
+    
+        .video-right-arrow-wrapper {
+            display: flex;
+            margin: 10px;
+                       
+            .right-arrow {                
+                cursor: pointer; 
+            }
+        }
+    }
+}
+
+
 
 // ******************************GALLERY******************************
 
