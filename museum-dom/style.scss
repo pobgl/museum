@@ -306,10 +306,25 @@ html {
     padding-top: 0px;
     padding-bottom: 60px;
 
+    .welcome-slider-image {
+        position: absolute;
+        right: 480px;
+        z-index: 2;
+        display: none;
+    }
+
+    .welcome-slider-image.active {
+        display: block;
+    }
+
+
+
     .welcome_content-wrapper {
         display: flex;
         justify-content: space-between;
-        background-image: $welcome-section-gradient-background;
+        // position: relative;
+        // z-index: 1;
+       // background-image: $welcome-section-gradient-background;
         background-repeat: no-repeat;
         background-position: right;
         width: 100%;
@@ -318,6 +333,8 @@ html {
             flex-direction: column;
             width: 100%;
             background: linear-gradient(90deg, #030303 25%, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+            position: relative;
+            z-index: 3;
             
             .welcome-title {
                 margin-top: 150px;                
@@ -357,21 +374,70 @@ html {
 .welcome-slider-wrapper {
     display: flex;    
     width: 100%;
+    position: relative;
+    z-index: 5;
     
 }
 
-.welcome-slider {
+.welcome-slider-dots {
     display: flex;
+    justify-content: start;
+    align-items: center;
     height: 120px;
     width: 600px;
     background-color: $color-background-dark;
-    padding-top: 42px;
+    padding-top: 0px;
     padding-left: 76px;    
     margin-right: 0;
     margin-top: 690px;
     @include paragraph-normal();
     text-transform: uppercase;
     color: $color-background-light;
+
+    .welcome-counter-wrapper {
+        display: flex;
+        width: 180px;
+
+        span {
+            padding-right: 5px;
+            padding-left: 5px;
+        }
+    }
+
+    .welcome-dots-wrapper {
+        display: flex;
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+
+        .welcome-slider-dot {
+            margin-left: 20px;
+            width: 17px;
+            height: 17px;
+            background-color: $color-background-light;
+            cursor: pointer;  
+        }
+
+        .welcome-slider-dot.active {
+            background-color: $color-font-gold;
+        }
+
+    }
+
+    .welcome-arrow-wrapper {
+        display: flex;
+        width: 340px;
+        padding-right: 60px;
+        
+        .right-arrow {
+            transform: rotate(180deg);
+            cursor: pointer; 
+        }
+
+        .left-arrow {
+            cursor: pointer;
+        }
+    }
 }
 
 // ******************************VISITING******************************
@@ -534,12 +600,88 @@ html {
         
         .main-video {
             display: flex;
-            flex-flow: wrap;
-            row-gap: 38px;
-            column-gap: 35px;
+            width: 1440px;
+            justify-content: space-between;
+            // flex-flow: wrap;
+            // row-gap: 38px;
+            // column-gap: 35px;
+        }
+        .video-prev-wrapper {
+            position: relative;
+            display: flex;
+            top: -50px;
+            
+            .video-prev {
+                display: none;
+                margin-left: 18px;
+                margin-right: 18px;
+            }
+
+            .video-prev.active {
+                display: block;
+            }
         }
     }
 }
+
+.video-slider-wrapper {
+    display: flex;    
+    width: 100%;
+    height: 100%; 
+    position: relative; 
+    top: -95px; 
+    
+    .video-slider-dots {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;        
+        width: 220px;    
+        
+        .video-dots-wrapper {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            
+    
+            .video-slider-dot {
+                border-radius: 50%;
+                margin: 8px;
+                width: 12px;
+                height: 12px;
+                background-color: $color-font-grey;
+                cursor: pointer;  
+            }
+    
+            .video-slider-dot.active {
+                background-color: $color-background-dark;
+            }
+    
+        }
+    
+        .video-left-arrow-wrapper {
+            display: flex;
+            margin: 10px;
+            
+                    
+    
+            .left-arrow {
+                cursor: pointer;
+                transform: rotate(180deg);
+            }
+        }
+    
+        .video-right-arrow-wrapper {
+            display: flex;
+            margin: 10px;
+                       
+            .right-arrow {                
+                cursor: pointer; 
+            }
+        }
+    }
+}
+
+
 
 // ******************************GALLERY******************************
 
