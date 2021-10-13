@@ -306,10 +306,25 @@ html {
     padding-top: 0px;
     padding-bottom: 60px;
 
+    .welcome-slider-image {
+        position: absolute;
+        right: 230px;
+        z-index: 2;
+        display: none;
+    }
+
+    .welcome-slider-image.active {
+        display: block;
+    }
+
+
+
     .welcome_content-wrapper {
         display: flex;
         justify-content: space-between;
-        background-image: $welcome-section-gradient-background;
+        // position: relative;
+        // z-index: 1;
+       // background-image: $welcome-section-gradient-background;
         background-repeat: no-repeat;
         background-position: right;
         width: 100%;
@@ -318,6 +333,8 @@ html {
             flex-direction: column;
             width: 100%;
             background: linear-gradient(90deg, #030303 25%, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+            position: relative;
+            z-index: 3;
             
             .welcome-title {
                 margin-top: 150px;                
@@ -357,21 +374,70 @@ html {
 .welcome-slider-wrapper {
     display: flex;    
     width: 100%;
+    position: relative;
+    z-index: 5;
     
 }
 
-.welcome-slider {
+.welcome-slider-dots {
     display: flex;
+    justify-content: start;
+    align-items: center;
     height: 120px;
     width: 600px;
     background-color: $color-background-dark;
-    padding-top: 42px;
+    padding-top: 0px;
     padding-left: 76px;    
     margin-right: 0;
     margin-top: 690px;
     @include paragraph-normal();
     text-transform: uppercase;
     color: $color-background-light;
+
+    .welcome-counter-wrapper {
+        display: flex;
+        width: 180px;
+
+        span {
+            padding-right: 5px;
+            padding-left: 5px;
+        }
+    }
+
+    .welcome-dots-wrapper {
+        display: flex;
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+
+        .welcome-slider-dot {
+            margin-left: 20px;
+            width: 17px;
+            height: 17px;
+            background-color: $color-background-light;
+            cursor: pointer;  
+        }
+
+        .welcome-slider-dot.active {
+            background-color: $color-font-gold;
+        }
+
+    }
+
+    .welcome-arrow-wrapper {
+        display: flex;
+        width: 340px;
+        padding-right: 60px;
+        
+        .right-arrow {
+            transform: rotate(180deg);
+            cursor: pointer; 
+        }
+
+        .left-arrow {
+            cursor: pointer;
+        }
+    }
 }
 
 // ******************************VISITING******************************

@@ -46,6 +46,11 @@
         <section class="section welcome dark-section">
             <div class="container">
                 <div class="welcome_content-wrapper">
+                    <img src="/assets/img/welcome-slider/1.jpg" alt="Slider-image" class="welcome-slider-image active">
+                    <img src="/assets/img/welcome-slider/2.jpg" alt="Slider-image" class="welcome-slider-image">
+                    <img src="/assets/img/welcome-slider/3.jpg" alt="Slider-image" class="welcome-slider-image">
+                    <img src="/assets/img/welcome-slider/4.jpg" alt="Slider-image" class="welcome-slider-image">
+                    <img src="/assets/img/welcome-slider/5.jpg" alt="Slider-image" class="welcome-slider-image">
                     <div class="welcome-content">
                         <h2 class="welcome-title section-title">
                             <span>Welcome</span>
@@ -61,8 +66,21 @@
                         </div>                        
                     </div>
                     <div class="welcome-slider-wrapper">
-                        <div class="welcome-slider">
-                            01 | 05 - -
+                        <div class="welcome-slider-dots">
+                            <div class="welcome-counter-wrapper">
+                                <span id="welcome-slider-counter">01</span><span>|</span><span>05</span>
+                            </div>    
+                            <div class="welcome-dots-wrapper">
+                                <div class="welcome-slider-dot active"></div>
+                                <div class="welcome-slider-dot"></div>
+                                <div class="welcome-slider-dot"></div>
+                                <div class="welcome-slider-dot"></div>
+                                <div class="welcome-slider-dot"></div>
+                            </div>
+                            <div class="welcome-arrow-wrapper">
+                                <img src="/assets/svg/Arrow.svg" alt="Arrow" class="left-arrow" id="prev-arrow">
+                                <img src="/assets/svg/Arrow.svg" alt="Arrow" class="right-arrow" id="next-arrow">
+                            </div>
                         </div>
                     </div>                    
                 </div>
@@ -152,9 +170,7 @@
                         Enter and visit one of the most famous museums in the world and enjoy masterpieces such as Mona Lisa or Hammurabi's Code
                     </div>
                     <div class="main-video">
-                        <iframe width="1440" height="735" src="https://www.youtube.com/embed/zp1BXPX8jcU?modestbranding=1" title="YouTube video player" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-                        gyroscope; picture-in-picture" allowfullscreen>
+                        <iframe width="1440" height="735" src="https://www.youtube.com/embed/zp1BXPX8jcU?modestbranding=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                         </iframe>
 
                         <iframe width="452" height="254" src="https://www.youtube.com/embed/aWmJ5DgyWPI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
@@ -165,7 +181,6 @@
 
                         <iframe width="452" height="254" src="https://www.youtube.com/embed/NOhDysLnTvY" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                         </iframe>
-
                     </div>                    
                 </div>               
             </div>            
@@ -328,6 +343,7 @@
                 </div>           
             </div>
         </div>
-    </footer>    
+    </footer> 
+    <script src="main.js"></script>   
 </body>
 </html>
